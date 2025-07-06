@@ -3,7 +3,16 @@ public class prototype
 {
     public static void main(String[] args)
     {
+        double[] nums = {9,5,3,5};
+        int[] used = {0,0,0,0};
+        String[] operationStrings = new String[3];
+        int curStep = 0;
 
+        String[] ans = findWay(nums, used, operationStrings, curStep);
+
+        System.out.println(ans[0]);
+        System.out.println(ans[1]);
+        System.out.println(ans[2]);
     }
 
 
