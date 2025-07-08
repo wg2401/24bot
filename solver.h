@@ -8,3 +8,5 @@ struct Expression {
 
 
 Expression* process(double* nums, int* used, Expression* operationsSoFar, int curStep);
+
+void printExpressions(Expression* operations);

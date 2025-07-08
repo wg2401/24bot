@@ -3,7 +3,7 @@ public class prototype
 {
     public static void main(String[] args)
     {
-        double[] nums = {3,11,9,12};
+        double[] nums = {9,9,12,16};
         int[] used = {0,0,0,0};
         String[] operationStrings = new String[3];
         int curStep = 0;
