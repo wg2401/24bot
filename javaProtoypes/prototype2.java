@@ -1,9 +1,10 @@
+package javaProtoypes;
 
-public class prototype 
+public class prototype2
 {
     public static void main(String[] args)
     {
-        double[] nums = {9,9,12,16};
+        double[] nums = {80,1,112,1};
         int[] used = {0,0,0,0};
         String[] operationStrings = new String[3];
         int curStep = 0;
@@ -64,7 +65,7 @@ public class prototype
                         {
                             //add nums[i] and nums[j] and recurse
                             nums[j] = tempI + tempJ;
-                            operationStrings[curStep] = tempI + "+" + tempJ;
+                            operationStrings[curStep] = (i+1) + "q" + (j+1);
                             potAns = findWay(nums, used, operationStrings, curStep + 1);
                             if (potAns!=null)
                             {
@@ -74,7 +75,7 @@ public class prototype
 
                             //multiply and recurse
                             nums[j] = tempI * tempJ;
-                            operationStrings[curStep] = tempI + "x" + tempJ;
+                            operationStrings[curStep] = (i+1) + "e" + (j+1);
                             potAns = findWay(nums, used, operationStrings, curStep + 1);
                             if (potAns!=null)
                             {
@@ -86,7 +87,7 @@ public class prototype
                         if (Math.abs(tempJ) > 1e-9)
                         {
                             nums[j] = tempI/tempJ;
-                            operationStrings[curStep] = tempI + "/" + tempJ;
+                            operationStrings[curStep] = (i+1) + "r" + (j+1);
                             potAns = findWay(nums, used, operationStrings, curStep + 1);
                             if (potAns!=null)
                             {
@@ -96,7 +97,7 @@ public class prototype
 
                         //nums[i] - nums[j] and recurse
                         nums[j] = tempI - tempJ;
-                        operationStrings[curStep] = tempI + "-" + tempJ;
+                        operationStrings[curStep] = (i+1) + "w" + (j+1);
                         potAns = findWay(nums, used, operationStrings, curStep + 1);
                         if (potAns!=null)
                         {
