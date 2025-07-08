@@ -110,7 +110,7 @@ Expression* process(double* nums, int* used, Expression* operationsSoFar, int cu
 
 void printExpressions(Expression* operations)
 {
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 3; i++)
     {
         Expression exp = operations[i];
         std::cout << exp.ind1 << " " << exp.opCode << " " << exp.ind2 << std::endl;
