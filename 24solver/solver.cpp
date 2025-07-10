@@ -119,3 +119,34 @@ void printExpressions(Expression* operations)
 }
 
 
+static int opCodeToId(char c) {
+    switch (c) {
+        case 'q': return 0;   // '+'
+        case 'w': return 1;   // '-'
+        case 'e': return 2;   // '×'
+        case 'r': return 3;   // '÷'
+        default : return -1;
+    }
+}
+
+static int resultBuf[9];
+
+extern "C" int* solve4 (int a, int b, int c, int d)
+{
+    double nums[4]   = {double(a), double(b), double(c), double(d)};
+    int    used[4]   = {0,0,0,0};
+    Expression ops[3];
+
+    Expression* ok = process(nums, used, ops, 0);
+    if (!ok) {
+        resultBuf[0] = -1;
+        return resultBuf;
+    }
+
+    for (int k = 0; k < 3; ++k) {
+        resultBuf[k*3+0] = ops[k].ind1 - 1;          
+        resultBuf[k*3+1] = ops[k].ind2 - 1;
+        resultBuf[k*3+2] = opCodeToId(ops[k].opCode);
+    }
+    return resultBuf;         
+}
