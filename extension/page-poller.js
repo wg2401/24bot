@@ -1,5 +1,8 @@
 
 (function () {
+  
+
+
   let last = '';
   setInterval(() => {
     const q = window.quad;
@@ -9,6 +12,9 @@
         last = stamp;
         console.log('[4Nums] digits →', q.slice());
       }
+
+
+
     }
   }, 100);
 })();
