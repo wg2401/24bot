@@ -7,9 +7,9 @@
     "js": ["content.js"],
     "run_at": "document_start"
   }],
-
+  
   "web_accessible_resources": [{
-    "resources": ["page-poller.js"],
+    "resources": ["page-poller.js", "solver.wasm"], 
     "matches": ["https://www.4nums.com/*"]
   }]
 }
