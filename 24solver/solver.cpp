@@ -144,9 +144,9 @@ extern "C" int* solve4 (int a, int b, int c, int d)
     }
 
     for (int k = 0; k < 3; ++k) {
-        resultBuf[k*3+0] = ops[k].ind1 - 1;          
-        resultBuf[k*3+1] = ops[k].ind2 - 1;
-        resultBuf[k*3+2] = opCodeToId(ops[k].opCode);
+        resultBuf[k*3+0] = ops[k].ind1;          
+        resultBuf[k*3+1] = opCodeToId(ops[k].opCode);
+        resultBuf[k*3+2] = ops[k].ind2;
     }
     return resultBuf;         
 }
