@@ -33,7 +33,7 @@
     if (!Array.isArray(q) || q.length !== 4) return;
 
     const stamp = q.join(',');
-    if (stamp === last) return;               
+    // if (stamp === last) return;               
     last = stamp;
 
     console.log('[4Nums] digits →', q.slice());   
